@@ -313,22 +313,22 @@ function FloatingCard({
    HERO STAT
 ============================================================ */
 
-function HeroStat({
-  number,
-  label,
-}: {
-  number: string;
-  label: string;
-}) {
-  return (
-    <div className="flex items-center gap-4 sm:justify-center">
-      <p className="text-3xl font-semibold tracking-tight text-[#111111]">
-        {number}
-      </p>
+// function HeroStat({
+//   number,
+//   label,
+// }: {
+//   number: string;
+//   label: string;
+// }) {
+//   return (
+//     <div className="flex items-center gap-4 sm:justify-center">
+//       <p className="text-3xl font-semibold tracking-tight text-[#111111]">
+//         {number}
+//       </p>
 
-      <p className="max-w-[130px] text-sm leading-5 text-[#777777]">
-        {label}
-      </p>
-    </div>
-  );
-}
+//       <p className="max-w-[130px] text-sm leading-5 text-[#777777]">
+//         {label}
+//       </p>
+//     </div>
+//   );
+// }
