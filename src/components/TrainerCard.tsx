@@ -6,32 +6,32 @@ interface TrainerCardProps {
 
 const TrainerCard = ({ trainer }: TrainerCardProps) => {
   return (
-    <div className="group overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+    <div className="group overflow-hidden rounded-2xl border border-[#E8E5E0] bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-violet-200 hover:shadow-xl hover:shadow-violet-100/50">
       
       {/* Trainer Image */}
-      <div className="relative h-64 overflow-hidden">
+      <div className="relative h-64 overflow-hidden bg-[#EDE9FE]">
         <img
           src={trainer.image}
           alt={trainer.name}
-          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
       </div>
 
       {/* Content */}
       <div className="p-6">
-        <h3 className="text-xl font-bold text-gray-900">
+        <h3 className="text-xl font-bold text-[#111111]">
           {trainer.name}
         </h3>
 
-        <p className="mt-1 text-sm font-medium text-blue-600">
+        <p className="mt-1 text-sm font-medium text-[#8B5CF6]">
           {trainer.role}
         </p>
 
-        <p className="mt-2 text-sm text-gray-500">
+        <p className="mt-2 text-sm text-[#6B6B6B]">
           {trainer.experience}
         </p>
 
-        <p className="mt-4 text-sm leading-6 text-gray-600">
+        <p className="mt-4 text-sm leading-6 text-[#6B6B6B]">
           {trainer.description}
         </p>
 
@@ -40,7 +40,7 @@ const TrainerCard = ({ trainer }: TrainerCardProps) => {
           {trainer.skills.map((skill: string) => (
             <span
               key={skill}
-              className="rounded-full bg-blue-50 px-3 py-1 text-xs font-medium text-blue-700"
+              className="rounded-full bg-[#EDE9FE] px-3 py-1 text-xs font-medium text-[#7C3AED]"
             >
               {skill}
             </span>

@@ -10,11 +10,11 @@ import {
 } from "react-icons/fa";
 
 const quickLinks = [
-  { name: "Home", href: "#home" },
-  { name: "Kids Zone", href: "#kids-zone" },
-  { name: "Adult Programs", href: "#adult-programs" },
-  { name: "Trainers", href: "#trainers" },
-  { name: "Contact", href: "#contact" },
+  { name: "Home", href: "/" },
+  { name: "Kids Zone", href: "/kids-zone" },
+  { name: "Job Ready Zone", href: "/job-ready" },
+  { name: "Trainers", href: "/trainers" },
+  { name: "Contact", href: "/contact" },
 ];
 
 const programs = [
@@ -29,7 +29,7 @@ const programs = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-slate-950">
+    <footer className="border-t border-[#E8E5E0] bg-white">
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
 
         {/* Main Footer */}
@@ -39,12 +39,12 @@ export default function Footer() {
           <div>
             <a
               href="#home"
-              className="text-2xl font-bold text-white"
+              className="text-2xl font-bold text-[#111111]"
             >
-              Code<span className="text-blue-400">Mentor</span>
+              Code<span className="text-[#8B5CF6]">Sphere</span>
             </a>
 
-            <p className="mt-5 max-w-sm leading-7 text-slate-400">
+            <p className="mt-5 max-w-sm leading-7 text-[#6B6B6B]">
               Personalised 1:1 coding and technology training
               for students, professionals and career learners
               in the UK and India.
@@ -56,7 +56,7 @@ export default function Footer() {
               <a
                 href="#"
                 aria-label="Instagram"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-slate-300 transition hover:border-blue-400/40 hover:text-blue-400"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-[#E8E5E0] bg-[#FAF9F7] text-[#6B6B6B] transition hover:border-[#8B5CF6] hover:bg-[#EDE9FE] hover:text-[#8B5CF6]"
               >
                 <FaInstagram className="h-5 w-5" />
               </a>
@@ -64,7 +64,7 @@ export default function Footer() {
               <a
                 href="#"
                 aria-label="LinkedIn"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-slate-300 transition hover:border-blue-400/40 hover:text-blue-400"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-[#E8E5E0] bg-[#FAF9F7] text-[#6B6B6B] transition hover:border-[#8B5CF6] hover:bg-[#EDE9FE] hover:text-[#8B5CF6]"
               >
                 <FaLinkedin className="h-5 w-5" />
               </a>
@@ -74,7 +74,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-white">
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-[#111111]">
               Quick Links
             </h3>
 
@@ -83,7 +83,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="group flex items-center gap-1 text-slate-400 transition hover:text-white"
+                    className="group flex items-center gap-1 text-[#6B6B6B] transition hover:text-[#8B5CF6]"
                   >
                     {link.name}
 
@@ -96,7 +96,7 @@ export default function Footer() {
 
           {/* Programs */}
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-white">
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-[#111111]">
               Programs
             </h3>
 
@@ -105,7 +105,7 @@ export default function Footer() {
                 <li key={program}>
                   <a
                     href="#programs"
-                    className="text-slate-400 transition hover:text-white"
+                    className="text-[#6B6B6B] transition hover:text-[#8B5CF6]"
                   >
                     {program}
                   </a>
@@ -116,36 +116,36 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-white">
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-[#111111]">
               Get In Touch
             </h3>
 
             <div className="mt-5 space-y-4">
 
               <a
-                href="mailto:hello@codementor.com"
-                className="flex items-start gap-3 text-slate-400 transition hover:text-white"
+                href="mailto:hello@codesphere.com"
+                className="flex items-start gap-3 text-[#6B6B6B] transition hover:text-[#8B5CF6]"
               >
-                <Mail className="mt-1 h-5 w-5 shrink-0 text-blue-400" />
+                <Mail className="mt-1 h-5 w-5 shrink-0 text-[#8B5CF6]" />
 
                 <span>
-                  hello@codementor.com
+                  hello@codesphere.com
                 </span>
               </a>
 
               <a
                 href="tel:+440000000000"
-                className="flex items-start gap-3 text-slate-400 transition hover:text-white"
+                className="flex items-start gap-3 text-[#6B6B6B] transition hover:text-[#8B5CF6]"
               >
-                <Phone className="mt-1 h-5 w-5 shrink-0 text-blue-400" />
+                <Phone className="mt-1 h-5 w-5 shrink-0 text-[#8B5CF6]" />
 
                 <span>
                   +44 0000 000000
                 </span>
               </a>
 
-              <div className="flex items-start gap-3 text-slate-400">
-                <MapPin className="mt-1 h-5 w-5 shrink-0 text-blue-400" />
+              <div className="flex items-start gap-3 text-[#6B6B6B]">
+                <MapPin className="mt-1 h-5 w-5 shrink-0 text-[#8B5CF6]" />
 
                 <span>
                   United Kingdom
@@ -160,23 +160,23 @@ export default function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="mt-16 flex flex-col gap-4 border-t border-white/10 pt-8 text-sm text-slate-500 md:flex-row md:items-center md:justify-between">
+        <div className="mt-16 flex flex-col gap-4 border-t border-[#E8E5E0] pt-8 text-sm text-[#6B6B6B] md:flex-row md:items-center md:justify-between">
 
           <p>
-            © {new Date().getFullYear()} CodeMentor. All rights reserved.
+            © {new Date().getFullYear()} CodeSphere. All rights reserved.
           </p>
 
           <div className="flex gap-6">
             <a
               href="#"
-              className="transition hover:text-white"
+              className="transition hover:text-[#8B5CF6]"
             >
               Privacy Policy
             </a>
 
             <a
               href="#"
-              className="transition hover:text-white"
+              className="transition hover:text-[#8B5CF6]"
             >
               Terms & Conditions
             </a>

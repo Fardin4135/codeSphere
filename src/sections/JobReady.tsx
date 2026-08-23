@@ -1,50 +1,49 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Gamepad2 } from "lucide-react";
+import { ArrowRight, Briefcase } from "lucide-react";
 import { Link } from "react-router-dom";
 import SectionHeading from "../components/SectionHeading";
 import CourseCard from "../components/CourseCard";
 import { courses } from "../data/courses";
 
-export default function KidsZone() {
-  const kidsCourses = courses.filter((course) => course.category === "kids");
+export default function JobReady() {
+  const jobReadyCourses = courses.filter(
+    (course) => course.category === "adult"
+  );
 
-  // Duplicate the array so the infinite loop is seamless
-  const marqueeItems = [...kidsCourses, ...kidsCourses];
+  const marqueeItems = [...jobReadyCourses, ...jobReadyCourses];
 
   return (
-    <section className="overflow-hidden bg-[#FAF9F7] px-6 py-24 lg:px-8">
+    <section className="overflow-hidden bg-white px-6 py-24 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <SectionHeading
-          eyebrow="Kids Zone · Ages 10–17"
-          title="Turn curiosity into real technology skills."
-          description="Fun, personalised 1:1 online coding sessions designed to help young learners understand technology, solve problems and build real projects."
+          eyebrow="Job Ready Zone"
+          title="Upgrade your skills. Accelerate your career."
+          description="Practical technology and professional development programs designed around real-world skills and career goals."
         />
 
         <div className="mb-10 flex items-center justify-center gap-3">
           <div className="rounded-xl bg-[#EDE9FE] p-3 text-[#8B5CF6]">
-            <Gamepad2 size={24} />
+            <Briefcase size={24} />
           </div>
 
           <div>
-            <p className="font-semibold text-[#111111]">Learn by doing</p>
+            <p className="font-semibold text-[#111111]">
+              Career-focused learning
+            </p>
             <p className="text-sm text-[#6B6B6B]">
-              Projects, challenges and personalised guidance
+              Learn skills you can actually use
             </p>
           </div>
         </div>
       </div>
 
-      {/* Infinite Auto-scrolling Row */}
       <div className="relative mt-6 w-full">
-        {/* Soft edge blur masks */}
-        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-[#FAF9F7] to-transparent sm:w-28" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-[#FAF9F7] to-transparent sm:w-28" />
+        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-white to-transparent sm:w-28" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-white to-transparent sm:w-28" />
 
         <motion.div
           className="flex gap-5"
-          animate={{
-            x: ["0%", "-50%"],
-          }}
+          animate={{ x: ["0%", "-50%"] }}
           transition={{
             ease: "linear",
             duration: 15,
@@ -55,7 +54,7 @@ export default function KidsZone() {
           {marqueeItems.map((course, idx) => (
             <div
               key={`${course.id}-${idx}`}
-              className="w-[280px] shrink-0 sm:w-[320px]"
+              className="w-[290px] shrink-0 sm:w-[330px]"
             >
               <CourseCard course={course} />
             </div>
@@ -63,13 +62,12 @@ export default function KidsZone() {
         </motion.div>
       </div>
 
-      {/* Explore Link */}
       <div className="mt-12 text-center">
         <Link
-          to="/kids-zone"
+          to="/job-ready"
           className="group inline-flex items-center gap-2 text-sm font-semibold text-[#8B5CF6] transition-colors hover:text-[#7C3AED]"
         >
-          Explore Kids Zone
+          Explore Job Ready Zone
           <ArrowRight
             size={17}
             className="transition-transform group-hover:translate-x-1"

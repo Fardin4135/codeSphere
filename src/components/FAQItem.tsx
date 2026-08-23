@@ -13,20 +13,20 @@ export default function FAQItem({
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="border-b border-white/10">
+    <div className="border-b border-[#E8E5E0]">
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
         className="flex w-full items-center justify-between gap-6 py-6 text-left"
       >
-        <span className="text-lg font-semibold text-white">
+        <span className="text-lg font-semibold text-[#111111] transition-colors hover:text-[#8B5CF6]">
           {question}
         </span>
 
         {isOpen ? (
-          <Minus className="h-5 w-5 shrink-0 text-blue-400" />
+          <Minus className="h-5 w-5 shrink-0 text-[#8B5CF6]" />
         ) : (
-          <Plus className="h-5 w-5 shrink-0 text-blue-400" />
+          <Plus className="h-5 w-5 shrink-0 text-[#8B5CF6]" />
         )}
       </button>
 
@@ -38,7 +38,7 @@ export default function FAQItem({
         }`}
       >
         <div className="overflow-hidden">
-          <p className="pb-6 pr-10 leading-7 text-slate-300">
+          <p className="pb-6 pr-10 leading-7 text-[#6B6B6B]">
             {answer}
           </p>
         </div>

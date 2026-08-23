@@ -39,4 +39,14 @@ export const trainers: Trainer[] = [
     description:
       "DevOps specialist helping learners understand cloud and deployment technologies.",
   },
+  {
+    id: 4,
+    name: "Elena Rostova",
+    role: "DSA &  Programming Mentor",
+    experience: "6+ Years Experience",
+    image: "/trainers/trainer-4.jpg",
+    skills: ["C++", "Algorithms", "Data Structures"],
+    description:
+      "Former FAANG engineer passionate about simplifying complex algorithms and technical interview prep.",
+  },
 ];

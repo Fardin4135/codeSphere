@@ -7,7 +7,7 @@ import { projects } from "../data/projects";
 
 export default function Projects() {
   return (
-    <section className="bg-slate-950 px-6 py-24 lg:px-8">
+    <section className="bg-[#FAF9F7] px-6 py-24 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <SectionHeading
           eyebrow="Learn by Building"
@@ -32,7 +32,7 @@ export default function Projects() {
         <div className="mt-10 text-center">
           <Link
             to="/projects"
-            className="group inline-flex items-center gap-2 text-sm font-semibold text-blue-400"
+            className="group inline-flex items-center gap-2 text-sm font-semibold text-[#8B5CF6] transition-colors hover:text-[#7C3AED]"
           >
             View project examples
             <ArrowRight

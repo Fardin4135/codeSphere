@@ -16,8 +16,8 @@ export default function Button({
 }: ButtonProps) {
   const classes =
     variant === "primary"
-      ? "bg-blue-500 text-white hover:bg-blue-400"
-      : "border border-white/15 bg-white/5 text-white hover:bg-white/10";
+      ? "bg-[#8B5CF6] text-white hover:bg-[#7C3AED] shadow-sm shadow-violet-200"
+      : "border border-[#E8E5E0] bg-white text-[#111111] hover:border-violet-200 hover:bg-[#EDE9FE]/40";
 
   const content = (
     <>
@@ -33,7 +33,7 @@ export default function Button({
     return (
       <a
         href={href}
-        className={`group inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3 font-semibold transition ${classes}`}
+        className={`group inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3 font-semibold transition duration-200 ${classes}`}
       >
         {content}
       </a>
@@ -43,7 +43,7 @@ export default function Button({
   return (
     <button
       onClick={onClick}
-      className={`group inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3 font-semibold transition ${classes}`}
+      className={`group inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3 font-semibold transition duration-200 ${classes}`}
     >
       {content}
     </button>

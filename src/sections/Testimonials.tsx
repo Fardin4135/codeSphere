@@ -5,7 +5,7 @@ import { testimonials } from "../data/testimonials";
 
 export default function Testimonials() {
   return (
-    <section className="bg-slate-950 px-6 py-24 lg:px-8">
+    <section className="bg-[#FAF9F7] px-6 py-24 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <SectionHeading
           eyebrow="Learner Experiences"

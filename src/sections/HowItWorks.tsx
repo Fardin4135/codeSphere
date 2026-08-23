@@ -48,7 +48,7 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="bg-slate-900/40 px-6 py-24 lg:px-8">
+    <section className="bg-white px-6 py-24 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <SectionHeading
           eyebrow="How It Works"
@@ -66,24 +66,24 @@ export default function HowItWorks() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.08 }}
-                className="relative rounded-2xl border border-white/10 bg-white/[0.03] p-6"
+                className="relative rounded-2xl border border-[#E8E5E0] bg-[#FAF9F7] p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-violet-200 hover:shadow-md"
               >
                 <div className="flex items-center justify-between">
-                  <span className="text-sm font-bold text-blue-400">
+                  <span className="text-sm font-bold text-[#8B5CF6]">
                     {step.number}
                   </span>
 
                   <Icon
                     size={21}
-                    className="text-slate-500"
+                    className="text-[#6B6B6B]"
                   />
                 </div>
 
-                <h3 className="mt-8 font-semibold">
+                <h3 className="mt-8 font-semibold text-[#111111]">
                   {step.title}
                 </h3>
 
-                <p className="mt-3 text-sm leading-6 text-slate-400">
+                <p className="mt-3 text-sm leading-6 text-[#6B6B6B]">
                   {step.description}
                 </p>
               </motion.div>

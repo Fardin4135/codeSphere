@@ -7,24 +7,24 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <div className="group overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] transition hover:-translate-y-2 hover:bg-white/[0.06]">
-      <div className="flex h-44 items-center justify-center bg-gradient-to-br from-slate-900 to-slate-800 text-6xl">
+    <div className="group overflow-hidden rounded-2xl border border-[#E8E5E0] bg-white shadow-sm transition duration-300 hover:-translate-y-2 hover:border-violet-200 hover:shadow-xl hover:shadow-violet-100/50">
+      <div className="flex h-44 items-center justify-center bg-gradient-to-br from-[#EDE9FE] to-[#F3E8FF] text-6xl">
         {project.icon}
       </div>
 
       <div className="p-6">
         <div className="flex items-center justify-between gap-3">
-          <h3 className="text-xl font-semibold">
+          <h3 className="text-xl font-semibold text-[#111111]">
             {project.title}
           </h3>
 
           <ArrowUpRight
             size={18}
-            className="text-slate-500 transition group-hover:text-blue-400"
+            className="text-[#6B6B6B] transition group-hover:text-[#8B5CF6]"
           />
         </div>
 
-        <p className="mt-3 text-sm leading-6 text-slate-400">
+        <p className="mt-3 text-sm leading-6 text-[#6B6B6B]">
           {project.description}
         </p>
 
@@ -32,7 +32,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           {project.technologies.map((technology) => (
             <span
               key={technology}
-              className="rounded-full bg-blue-500/10 px-3 py-1 text-xs text-blue-300"
+              className="rounded-full bg-[#EDE9FE] px-3 py-1 text-xs font-medium text-[#7C3AED]"
             >
               {technology}
             </span>

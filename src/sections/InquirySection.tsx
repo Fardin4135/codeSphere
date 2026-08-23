@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import { CheckCircle2, Mail, MessageCircle } from "lucide-react";
 import SectionHeading from "../components/SectionHeading";
+import type { InputHTMLAttributes } from "react";
 
 interface FormData {
   name: string;
@@ -31,7 +32,7 @@ export default function InquirySection() {
   return (
     <section
       id="inquiry"
-      className="bg-slate-950 px-6 py-24 lg:px-8"
+      className="bg-[#FAF9F7] px-6 py-24 lg:px-8"
     >
       <div className="mx-auto max-w-7xl">
         <SectionHeading
@@ -41,12 +42,12 @@ export default function InquirySection() {
         />
 
         <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
-          <div className="rounded-3xl border border-white/10 bg-gradient-to-br from-blue-500/10 to-purple-500/10 p-8">
-            <h3 className="text-2xl font-bold">
+          <div className="rounded-3xl border border-[#E8E5E0] bg-[#F3E8FF]/50 p-8">
+            <h3 className="text-2xl font-bold text-[#111111]">
               Let's find the right learning path.
             </h3>
 
-            <p className="mt-4 leading-7 text-slate-400">
+            <p className="mt-4 leading-7 text-[#6B6B6B]">
               Whether you're a parent looking for coding lessons
               for your child or an adult looking to develop new
               professional skills, send us an enquiry.
@@ -54,32 +55,32 @@ export default function InquirySection() {
 
             <div className="mt-8 space-y-5">
               <div className="flex gap-4">
-                <div className="rounded-xl bg-blue-500/10 p-3 text-blue-400">
+                <div className="rounded-xl bg-[#EDE9FE] p-3 text-[#8B5CF6]">
                   <MessageCircle size={20} />
                 </div>
 
                 <div>
-                  <h4 className="font-semibold">
+                  <h4 className="font-semibold text-[#111111]">
                     Personalised Guidance
                   </h4>
 
-                  <p className="mt-1 text-sm text-slate-500">
+                  <p className="mt-1 text-sm text-[#6B6B6B]">
                     Discuss your learning goals with us.
                   </p>
                 </div>
               </div>
 
               <div className="flex gap-4">
-                <div className="rounded-xl bg-blue-500/10 p-3 text-blue-400">
+                <div className="rounded-xl bg-[#EDE9FE] p-3 text-[#8B5CF6]">
                   <Mail size={20} />
                 </div>
 
                 <div>
-                  <h4 className="font-semibold">
+                  <h4 className="font-semibold text-[#111111]">
                     Quick Response
                   </h4>
 
-                  <p className="mt-1 text-sm text-slate-500">
+                  <p className="mt-1 text-sm text-[#6B6B6B]">
                     We'll get back to you about the next steps.
                   </p>
                 </div>
@@ -89,10 +90,10 @@ export default function InquirySection() {
 
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="rounded-3xl border border-white/10 bg-white/[0.03] p-6 sm:p-8"
+            className="rounded-3xl border border-[#E8E5E0] bg-white p-6 shadow-sm sm:p-8"
           >
             {isSubmitSuccessful && (
-              <div className="mb-6 flex items-center gap-3 rounded-xl border border-green-500/20 bg-green-500/10 p-4 text-sm text-green-300">
+              <div className="mb-6 flex items-center gap-3 rounded-xl border border-green-200 bg-green-50 p-4 text-sm text-green-700">
                 <CheckCircle2 size={18} />
                 Thanks! Your enquiry has been received.
               </div>
@@ -129,7 +130,7 @@ export default function InquirySection() {
               />
 
               <div>
-                <label className="mb-2 block text-sm font-medium">
+                <label className="mb-2 block text-sm font-medium text-[#111111]">
                   Country
                 </label>
 
@@ -137,7 +138,7 @@ export default function InquirySection() {
                   {...register("country", {
                     required: "Please select a country",
                   })}
-                  className="w-full rounded-xl border border-white/10 bg-slate-900 px-4 py-3 text-sm text-white outline-none focus:border-blue-500"
+                  className="w-full rounded-xl border border-[#E8E5E0] bg-[#FAF9F7] px-4 py-3 text-sm text-[#111111] outline-none transition focus:border-[#8B5CF6] focus:bg-white"
                 >
                   <option value="">Select country</option>
                   <option value="uk">
@@ -152,20 +153,20 @@ export default function InquirySection() {
                 </select>
 
                 {errors.country && (
-                  <p className="mt-1 text-xs text-red-400">
+                  <p className="mt-1 text-xs text-red-500">
                     {errors.country.message}
                   </p>
                 )}
               </div>
 
               <div>
-                <label className="mb-2 block text-sm font-medium">
+                <label className="mb-2 block text-sm font-medium text-[#111111]">
                   Age Group
                 </label>
 
                 <select
                   {...register("ageGroup")}
-                  className="w-full rounded-xl border border-white/10 bg-slate-900 px-4 py-3 text-sm text-white outline-none focus:border-blue-500"
+                  className="w-full rounded-xl border border-[#E8E5E0] bg-[#FAF9F7] px-4 py-3 text-sm text-[#111111] outline-none transition focus:border-[#8B5CF6] focus:bg-white"
                 >
                   <option value="">Select age group</option>
                   <option value="10-13">10–13</option>
@@ -175,32 +176,32 @@ export default function InquirySection() {
               </div>
 
               <div>
-                <label className="mb-2 block text-sm font-medium">
+                <label className="mb-2 block text-sm font-medium text-[#111111]">
                   Learning Category
                 </label>
 
                 <select
                   {...register("category")}
-                  className="w-full rounded-xl border border-white/10 bg-slate-900 px-4 py-3 text-sm text-white outline-none focus:border-blue-500"
+                  className="w-full rounded-xl border border-[#E8E5E0] bg-[#FAF9F7] px-4 py-3 text-sm text-[#111111] outline-none transition focus:border-[#8B5CF6] focus:bg-white"
                 >
                   <option value="">Select category</option>
                   <option value="kids">
-                    Kids Zone
+                    Kids 
                   </option>
                   <option value="adult">
-                    Adult Programs
+                    Job Ready
                   </option>
                 </select>
               </div>
 
               <div className="sm:col-span-2">
-                <label className="mb-2 block text-sm font-medium">
+                <label className="mb-2 block text-sm font-medium text-[#111111]">
                   Course Interested In
                 </label>
 
                 <select
                   {...register("course")}
-                  className="w-full rounded-xl border border-white/10 bg-slate-900 px-4 py-3 text-sm text-white outline-none focus:border-blue-500"
+                  className="w-full rounded-xl border border-[#E8E5E0] bg-[#FAF9F7] px-4 py-3 text-sm text-[#111111] outline-none transition focus:border-[#8B5CF6] focus:bg-white"
                 >
                   <option value="">Select a course</option>
                   <option value="python">
@@ -231,7 +232,7 @@ export default function InquirySection() {
               </div>
 
               <div className="sm:col-span-2">
-                <label className="mb-2 block text-sm font-medium">
+                <label className="mb-2 block text-sm font-medium text-[#111111]">
                   Message
                 </label>
 
@@ -239,14 +240,14 @@ export default function InquirySection() {
                   {...register("message")}
                   rows={5}
                   placeholder="Tell us what you would like to learn..."
-                  className="w-full resize-none rounded-xl border border-white/10 bg-slate-900 px-4 py-3 text-sm text-white outline-none placeholder:text-slate-600 focus:border-blue-500"
+                  className="w-full resize-none rounded-xl border border-[#E8E5E0] bg-[#FAF9F7] px-4 py-3 text-sm text-[#111111] outline-none placeholder:text-[#6B6B6B] transition focus:border-[#8B5CF6] focus:bg-white"
                 />
               </div>
             </div>
 
             <button
               type="submit"
-              className="mt-6 w-full rounded-xl bg-blue-500 px-6 py-3.5 font-semibold transition hover:bg-blue-400"
+              className="mt-6 w-full rounded-xl bg-[#8B5CF6] px-6 py-3.5 font-semibold text-white transition hover:bg-[#7C3AED]"
             >
               Send Enquiry
             </button>
@@ -256,8 +257,6 @@ export default function InquirySection() {
     </section>
   );
 }
-
-import type { InputHTMLAttributes } from "react";
 
 interface InputProps
   extends InputHTMLAttributes<HTMLInputElement> {
@@ -272,17 +271,17 @@ function Input({
 }: InputProps) {
   return (
     <div>
-      <label className="mb-2 block text-sm font-medium">
+      <label className="mb-2 block text-sm font-medium text-[#111111]">
         {label}
       </label>
 
       <input
         {...props}
-        className="w-full rounded-xl border border-white/10 bg-slate-900 px-4 py-3 text-sm text-white outline-none placeholder:text-slate-600 focus:border-blue-500"
+        className="w-full rounded-xl border border-[#E8E5E0] bg-[#FAF9F7] px-4 py-3 text-sm text-[#111111] outline-none placeholder:text-[#6B6B6B] transition focus:border-[#8B5CF6] focus:bg-white"
       />
 
       {error && (
-        <p className="mt-1 text-xs text-red-400">
+        <p className="mt-1 text-xs text-red-500">
           {error}
         </p>
       )}

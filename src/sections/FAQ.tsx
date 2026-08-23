@@ -36,7 +36,7 @@ const faqs = [
 
 export default function FAQ() {
   return (
-    <section className="bg-slate-900/40 px-6 py-24 lg:px-8">
+    <section className="bg-white px-6 py-24 lg:px-8">
       <div className="mx-auto max-w-4xl">
         <SectionHeading
           eyebrow="FAQ"

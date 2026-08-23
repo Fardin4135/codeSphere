@@ -7,7 +7,7 @@ import { trainers } from "../data/trainers";
 
 export default function Trainers() {
   return (
-    <section className="bg-slate-900/40 px-6 py-24 lg:px-8">
+    <section className="bg-white px-6 py-24 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <SectionHeading
           eyebrow="Meet the Trainers"
@@ -32,7 +32,7 @@ export default function Trainers() {
         <div className="mt-10 text-center">
           <Link
             to="/trainers"
-            className="group inline-flex items-center gap-2 text-sm font-semibold text-blue-400"
+            className="group inline-flex items-center gap-2 text-sm font-semibold text-[#8B5CF6] transition-colors hover:text-[#7C3AED]"
           >
             Meet all trainers
             <ArrowRight
