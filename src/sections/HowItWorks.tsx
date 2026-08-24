@@ -23,14 +23,9 @@ const steps = [
     icon: MessageSquare,
     badge: "Personalized Plan",
     preview: {
-      type: "assessment",
       heading: "Custom Learning Roadmap",
       detail: "Evaluation score: Intermediate Logic",
-      tags: [
-        "Target: Full Stack & DSA",
-        "Timezone: GMT / IST",
-        "Pace: 2x/Week",
-      ],
+      tags: ["Target: Full Stack & DSA", "Timezone: GMT / IST", "Pace: 2x/Week"],
     },
   },
   {
@@ -43,7 +38,6 @@ const steps = [
     icon: UserCheck,
     badge: "1:1 Match",
     preview: {
-      type: "mentor",
       heading: "Matched Instructor",
       detail: "Senior Full Stack Engineer (8+ Yrs)",
       tags: ["1:1 Dedicated", "Screen Share Ready", "Doubt Support"],
@@ -59,7 +53,6 @@ const steps = [
     icon: Video,
     badge: "Real-time Coding",
     preview: {
-      type: "live",
       heading: "Live Studio Session",
       detail: "VS Code Live Share active",
       tags: ["Instant Feedback", "Zero Pre-recorded Fluff", "Hands-on"],
@@ -75,7 +68,6 @@ const steps = [
     icon: Code2,
     badge: "GitHub Portfolio",
     preview: {
-      type: "build",
       heading: "Live Project Repository",
       detail: "git commit -m 'feat: deployment'",
       tags: ["Clean Code", "Industry Tools", "Portfolio Ready"],
@@ -91,7 +83,6 @@ const steps = [
     icon: Trophy,
     badge: "Career Ready",
     preview: {
-      type: "milestone",
       heading: "Milestone Verified",
       detail: "100% Core Competency Achieved",
       tags: ["Verified Certificate", "Resume Review", "Interview Ready"],
@@ -173,7 +164,6 @@ export default function HowItWorks() {
           {/* Right Column: Dynamic Stage Showcase */}
           <div className="lg:col-span-7">
             <div className="relative overflow-hidden rounded-3xl border border-[#E8E5E0] bg-[#FAF9F7] p-8 shadow-sm lg:p-10">
-              {/* Background Glow */}
               <div className="pointer-events-none absolute -right-16 -top-16 h-64 w-64 rounded-full bg-violet-200/50 blur-3xl" />
 
               <AnimatePresence mode="wait">
@@ -222,7 +212,7 @@ export default function HowItWorks() {
                       </div>
 
                       <span className="rounded-full bg-emerald-50 px-2.5 py-1 text-[11px] font-semibold text-emerald-600">
-                        <CheckCircle2 size={13} className="inline mr-1" />
+                        <CheckCircle2 size={13} className="mr-1 inline" />
                         Verified
                       </span>
                     </div>
@@ -241,7 +231,7 @@ export default function HowItWorks() {
                   </div>
 
                   {/* Navigation Footer */}
-                  <div className="mt-8 flex items-center justify-between pt-4 border-t border-[#E8E5E0]">
+                  <div className="mt-8 flex items-center justify-between border-t border-[#E8E5E0] pt-4">
                     <div className="flex gap-1.5">
                       {steps.map((_, i) => (
                         <div
@@ -271,7 +261,7 @@ export default function HowItWorks() {
                         disabled={activeStep === steps.length - 1}
                         onClick={() =>
                           setActiveStep((prev) =>
-                            Math.min(steps.length - 1, prev + 1),
+                            Math.min(steps.length - 1, prev + 1)
                           )
                         }
                         className="rounded-xl bg-[#8B5CF6] px-4 py-2 text-xs font-semibold text-white transition hover:bg-[#7C3AED] disabled:opacity-40"
