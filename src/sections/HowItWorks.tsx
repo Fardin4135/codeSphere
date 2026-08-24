@@ -8,9 +8,7 @@ import {
   Trophy,
   ArrowRight,
   CheckCircle2,
-  Calendar,
   Sparkles,
-  GitBranch,
 } from "lucide-react";
 import SectionHeading from "../components/SectionHeading";
 
@@ -28,7 +26,11 @@ const steps = [
       type: "assessment",
       heading: "Custom Learning Roadmap",
       detail: "Evaluation score: Intermediate Logic",
-      tags: ["Target: Full Stack & DSA", "Timezone: GMT / IST", "Pace: 2x/Week"],
+      tags: [
+        "Target: Full Stack & DSA",
+        "Timezone: GMT / IST",
+        "Pace: 2x/Week",
+      ],
     },
   },
   {
@@ -155,7 +157,9 @@ export default function HowItWorks() {
                     </div>
                     <h3
                       className={`text-base font-bold transition-colors ${
-                        isActive ? "text-[#111111]" : "text-[#555555] group-hover:text-[#111111]"
+                        isActive
+                          ? "text-[#111111]"
+                          : "text-[#555555] group-hover:text-[#111111]"
                       }`}
                     >
                       {step.title}
@@ -255,7 +259,9 @@ export default function HowItWorks() {
                       <button
                         type="button"
                         disabled={activeStep === 0}
-                        onClick={() => setActiveStep((prev) => Math.max(0, prev - 1))}
+                        onClick={() =>
+                          setActiveStep((prev) => Math.max(0, prev - 1))
+                        }
                         className="rounded-xl border border-[#E8E5E0] bg-white px-3.5 py-2 text-xs font-semibold text-[#111111] transition hover:bg-[#FAF9F7] disabled:opacity-40"
                       >
                         Prev
@@ -265,7 +271,7 @@ export default function HowItWorks() {
                         disabled={activeStep === steps.length - 1}
                         onClick={() =>
                           setActiveStep((prev) =>
-                            Math.min(steps.length - 1, prev + 1)
+                            Math.min(steps.length - 1, prev + 1),
                           )
                         }
                         className="rounded-xl bg-[#8B5CF6] px-4 py-2 text-xs font-semibold text-white transition hover:bg-[#7C3AED] disabled:opacity-40"
